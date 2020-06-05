@@ -1,7 +1,7 @@
 
 
 let num = 266219;
-let result=1;
+let result;
 
 num = num.toString().split('');
 
