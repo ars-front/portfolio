@@ -2,7 +2,7 @@
 let money, income, addExpenses, deposit, mission, period;
 
 money = 60000;
-income = 10000;
+income = "фриланс";
 addExpenses = "интернет, такси, коммуналка";
 deposit = true;
 mission = 5000000;
