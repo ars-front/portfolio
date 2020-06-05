@@ -1,25 +1,20 @@
 
-let money, income, addExpenses, deposit, mission, period;
 
-money = 60000;
-income = 10000;
-addExpenses = "интернет, такси, коммуналка";
-deposit = true;
-mission = 5000000;
-period = 12;
+let num = 266219;
+let result=1;
 
-console.log(typeof money );
-console.log(typeof income );
-console.log(typeof deposit);
+num = num.toString().split('');
 
-console.log(addExpenses.length);
+result = num.reduce((a,b)=>a*b);
 
-console.log("Период равен " + period + " месяцев" );
+console.log(result);
 
-console.log("Цель заработать " + mission + " рублей");
+//result**=3
 
-console.log(addExpenses.toLowerCase().split(', '));
+alert((result**3).toString().slice(0,2));
 
-let budgetDay = money / 30;
 
-console.log(budgetDay);
+
+
+
+
