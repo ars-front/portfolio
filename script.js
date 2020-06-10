@@ -1,4 +1,4 @@
-let arr = ["2666","4999","7888","943","2666","4999","7888"], result = [];
+let arr = ["2666","4999","7888","943","2666","4999","7888"];
 
 
 arr.forEach((element) => {
@@ -9,8 +9,9 @@ arr.forEach((element) => {
 
 
 for(let j = 2; j <=100; j++){
+
   let mark = true; 
-  
+
     for(var i=2; i<j; i++) {
         if(j % i == 0) {
             mark = false;
@@ -21,6 +22,4 @@ for(let j = 2; j <=100; j++){
       console.log(j+" Делители этого числа: 1 и "+j);
       }
 
-    
-    //result.push(prime);
 }
