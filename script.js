@@ -1,4 +1,4 @@
-let money, income="фриланс", addExpenses, deposit, mission, period, expenses1, amount1, expenses2, amount2, accumulatedMonth;
+let income="фриланс",  mission = 5000000, period = 12;
 
 
 
@@ -7,21 +7,21 @@ let showTypeOf = function(data){
 }
 
 
-money = +prompt("Ваш месячный доход?","300000");
+let money = +prompt("Ваш месячный доход?","300000");
 
 if(!money){
     confirm.log("Некорректное значение!");
     money = +prompt("Ваш месячный доход?");
 }
 
-addExpenses = prompt("Перечислите возможные расходы за рассчитываемый период через запятую", "бензин,еда,комунальные платежи");
+let addExpenses = prompt("Перечислите возможные расходы за рассчитываемый период через запятую", "бензин,еда,комунальные платежи");
 
-deposit = confirm("Есть ли у вас депозит в банке?");
-expenses1 = prompt("Введите обязательную статью расходов?","еда");
-amount1 = +prompt("Во сколько это обойдется?", "10000");
+let deposit = confirm("Есть ли у вас депозит в банке?");
+let expenses1 = prompt("Введите обязательную статью расходов?","еда");
+let amount1 = +prompt("Во сколько это обойдется?", "10000");
 
-expenses2 = prompt("Введите обязательную статью расходов?", "комунальные платежи");
-amount2 = +prompt("Во сколько это обойдется?", "10000");
+let expenses2 = prompt("Введите обязательную статью расходов?", "комунальные платежи");
+let amount2 = +prompt("Во сколько это обойдется?", "10000");
 
 
 
@@ -42,7 +42,7 @@ let getAccumulatedMonth = function (money, сallback) {
   
 }
 
-accumulatedMonth = getAccumulatedMonth(money, getExpensesMonth);
+let accumulatedMonth = getAccumulatedMonth(money, getExpensesMonth);
 
 
 let getTargetMonth = function (mission, budgetMonth) {
