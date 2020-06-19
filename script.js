@@ -122,11 +122,13 @@ console.log("Расходы за месяц "+ appData.expensesMonth );
 console.log(appData.getTargetMonth(appData.mission, appData.budgetMonth));
 
 
-
 appData.budgetDay = appData.budgetMonth / 30;
-
-//console.log("Бюджет на день "+ (Math.floor(appData.budgetDay)));
-
 
 
 console.log(appData.getStatusIncome(appData.budgetDay));
+
+for(let key in appData){
+
+  console.log(appData[key]);
+
+}
