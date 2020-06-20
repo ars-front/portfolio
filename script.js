@@ -43,16 +43,23 @@ let appData = {
 
        do{
         itemIncome = prompt("Какой у вас есть дополнительный заработок?", 'Таксую');
-      }while ( isNumber(itemIncome) );
+        itemIncome =itemIncome.trim();
+      }while ( isNumber(itemIncome)||itemIncome==='' );
 
        do{
         cashIncome = prompt("Сколько в месяц вы на этом зарабатываете?", 10000);
       }while (!isNumber(cashIncome));
 
        appData.income[itemIncome] = cashIncome;
+       
     }
 
-    appData.addExpenses = prompt("Перечислите возможные расходы за рассчитываемый период через запятую", "бензин,еда,комунальные платежи");
+    let check;
+    do{
+      appData.addExpenses = prompt("Перечислите возможные расходы за рассчитываемый период через запятую", "бензин,еда,комунальные платежи");
+      appData.addExpenses =appData.addExpenses.trim();
+      check = appData.addExpenses.indexOf(',')
+    }while ( isNumber(appData.addExpenses)||appData.addExpenses===''||check===-1 );
     appData.addExpenses = appData.addExpenses.toLowerCase().split(',');
     appData.deposit = confirm("Есть ли у вас депозит в банке?");
 
@@ -66,7 +73,8 @@ let appData = {
 
         do{
           exp1 = prompt("Введите обязательную статью расходов?","еда");
-        }while (isNumber(exp1));
+          exp1 = exp1.trim();
+        }while (isNumber(exp1)||exp1==='');
     
         do{
           exp2= +prompt("Во сколько это обойдется?", 10000);
@@ -172,7 +180,6 @@ for(let key in appData.addExpenses){
 
   let temp;
   if(key<Object.keys(appData.addExpenses).length-1){
-
   temp = appData.addExpenses[key][0].toUpperCase() + appData.addExpenses[key].slice(1)+", ";
   }else{
     temp = appData.addExpenses[key][0].toUpperCase() + appData.addExpenses[key].slice(1);
