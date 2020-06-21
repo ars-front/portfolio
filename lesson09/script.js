@@ -1,0 +1,40 @@
+let calcer = document.querySelector('#start');
+let buttonAddIncome =document.getElementsByTagName('button')[0];
+let buttonAddExpanses =document.getElementsByTagName('button')[1];
+let salaryAmount = document.querySelector('.salary-amount');
+let additionalIncomeTitle = document.querySelector('.income-items> .income-title')
+let additionalIncomeAmount = document.querySelector('.income-items> .income-amount');
+let possibleExpenseTitle =  document.querySelector('.expenses-items> .expenses-title');
+let possibleExpenseAmount =  document.querySelector('.expenses-items> .expenses-amount');
+let additionalExpensesItem =  document.querySelector('.additional_expenses-item');
+let deposit = document.querySelector('#deposit-check');
+let depositAmount =  document.querySelector('.target-amount');
+let periodRange =  document.querySelector('.period-select');
+let additionalIncome = document.querySelectorAll('.additional_income-item');
+let budgetMonth =  document.querySelector('.budget_month-value');
+let budgetDay =  document.querySelector('.budget_day-value');
+let possibleIncome =  document.querySelector('.additional_income-value');
+let possibleExpenses =  document.querySelector('.additional_expenses-value');
+let incomePeriod =  document.querySelector('.income_period-value');
+let targetMonth =  document.querySelector('.target_month-value');
+
+
+console.log(calcer);
+console.log(salaryAmount);
+console.log(buttonAddIncome);
+console.log(buttonAddExpanses);
+console.log(additionalIncomeTitle);
+console.log(additionalIncomeAmount);
+console.log(possibleExpenseTitle);
+console.log(possibleExpenseAmount);
+console.log(additionalExpensesItem);
+console.log(depositAmount);
+console.log(periodRange);
+console.log(deposit);
+console.log(additionalIncome);
+console.log(budgetMonth);
+console.log(budgetDay);
+console.log(possibleIncome);
+console.log(possibleExpenses);
+console.log(incomePeriod);
+console.log(targetMonth);
