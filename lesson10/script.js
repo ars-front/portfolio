@@ -13,6 +13,8 @@ let Paragraph = books[0].querySelectorAll('li');
 let Paragraph2 = books[5].querySelectorAll('li');
 Paragraph[4].before(Paragraph[6]);
 Paragraph[4].before(Paragraph[8]);
+Paragraph[9].before(Paragraph[2]);
+Paragraph[2].before(Paragraph[9]);
 Paragraph2[2].before(Paragraph2[9]);
 Paragraph2[4].after(Paragraph2[2]);
 Paragraph2[7].before(Paragraph2[5]);
@@ -21,4 +23,5 @@ let Paragraph6 = books[2].querySelectorAll('li');
 let chapter8 = document.createElement('li');
 chapter8.textContent = 'Глава 8: За пределами ES6';
 Paragraph6[9].before(chapter8);
+
 
