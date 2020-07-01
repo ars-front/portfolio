@@ -163,38 +163,39 @@ let appData = {
     item.value = null;
   });
 
-  let incomeItemsLen = 0;
+  //let incomeItemsLen = 0;
 
   incomeItems.forEach(function(item){
-    let itemIncome = item.querySelector('.income-title').value = null;
-    let cashIncome = item.querySelector('.income-amount').value = null;
+    item.querySelector('.income-title').value = null;
+    item.querySelector('.income-amount').value = null;
 
-    if(incomeItemsLen < 3 && incomeItemsLen > 0){
-      item.querySelector('.income-title').remove();
-      item.querySelector('.income-amount').remove();
+    if(incomeItems.length > 1){
+      item.remove();
+      //item.querySelector('.income-amount').remove();
     }
-
-    incomeItemsLen++;
+    incomeItems = document.querySelectorAll('.income-items');
+    //incomeItemsLen++;
     
 });
 
-let expensesItemLen =0;
+
 
   expensesItem.forEach(function(item){
     
-    let itemExpenses = item.querySelector('.expenses-title').value = null;
-    let cashExpenses = item.querySelector('.expenses-amount').value = null;
+    item.querySelector('.expenses-title').value = null;
+    item.querySelector('.expenses-amount').value = null;
     
-    if(expensesItemLen < 3 && expensesItemLen > 0){
-      item.querySelector('.expenses-title').remove();
-      item.querySelector('.expenses-amount').remove();
+    if(expensesItem.length > 1 ){
+      item.remove();
+      //item.querySelector('.expenses-amount').remove();
     }
 
-    expensesItemLen++;
+    expensesItem = document.querySelectorAll('.expenses-items');
+
+    //expensesItemLen++;
     
 });
-expensesItemLen = 0;
-incomeItemsLen = 0;
+
 
 buttonAddExpanses.style.display = 'block';
 buttonAddIncome.style.display = 'block';
