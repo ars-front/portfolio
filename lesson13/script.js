@@ -40,7 +40,7 @@ let isNumber = function(n){
 let money;
     
 
-//start();
+
 
 let appData = {
 
@@ -52,7 +52,6 @@ let appData = {
   percentDeposit : 0,
   moneyDeposit : 0,
   incomeMonth : 0,
-  //period : 12,
   budget : 0,
   budgetDay : 0,
   budgetMonth : 0,
@@ -61,7 +60,7 @@ let appData = {
 
   start : function(){
     
-  //Start.disabled = true; 
+ 
   Start.style.opacity = 0.2;
   Start.style.cursor = 'default';
   Start.style.display = "none";
@@ -96,21 +95,23 @@ let appData = {
   this.budgetMonth = this.getBudget(money, this.expensesMonth);
   this.budgetDay = this.budgetMonth / 30;
   this.showResult();
-  //appData.asking();
-  periodRange.removeEventListener('input', Ranger, false);
+  
+  //periodRange.removeEventListener('input', Ranger, false);
 
   },
 
   Reset: function(){
 
-    periodRange.addEventListener('input', Ranger, false);
-    
+    //periodRange.addEventListener('input', Ranger, false);
+    Start.style.display = 'block';
+    Cancel.style.display = 'none';
+    /*
     Start.disabled = false; 
     Cancel.style.display = 'none';
     Start.style.display = 'block';
     Start.style.opacity = 1;
     Start.style.cursor = 'pointer';
-
+    */
     salaryAmount.readOnly = false;
    targetAmount.readOnly = false;
    additionalIncomeTitle.readOnly = false;
@@ -197,6 +198,7 @@ incomeItemsLen = 0;
 
 buttonAddExpanses.style.display = 'block';
 buttonAddIncome.style.display = 'block';
+titlePeriodAmount.innerHTML= 1;
 
   },
 
